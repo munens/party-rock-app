@@ -15,6 +15,7 @@
 		C593EEC91EB564D1002B98D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C593EEC71EB564D1002B98D4 /* LaunchScreen.storyboard */; };
 		C593EED41EB564D1002B98D4 /* party_rock_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593EED31EB564D1002B98D4 /* party_rock_appTests.swift */; };
 		C593EEDF1EB564D1002B98D4 /* party_rock_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593EEDE1EB564D1002B98D4 /* party_rock_appUITests.swift */; };
+		C593EEEF1EB58763002B98D4 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593EEEE1EB58763002B98D4 /* VideoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C593EEDA1EB564D1002B98D4 /* party-rock-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "party-rock-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C593EEDE1EB564D1002B98D4 /* party_rock_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = party_rock_appUITests.swift; sourceTree = "<group>"; };
 		C593EEE01EB564D1002B98D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C593EEEE1EB58763002B98D4 /* VideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				C593EEC71EB564D1002B98D4 /* LaunchScreen.storyboard */,
 				C593EECA1EB564D1002B98D4 /* Info.plist */,
 				C593EEC21EB564D1002B98D4 /* party_rock_app.xcdatamodeld */,
+				C593EEEE1EB58763002B98D4 /* VideoVC.swift */,
 			);
 			path = "party-rock-app";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C593EEEF1EB58763002B98D4 /* VideoVC.swift in Sources */,
 				C593EEBE1EB564D1002B98D4 /* ViewController.swift in Sources */,
 				C593EEC41EB564D1002B98D4 /* party_rock_app.xcdatamodeld in Sources */,
 				C593EEBC1EB564D1002B98D4 /* AppDelegate.swift in Sources */,
