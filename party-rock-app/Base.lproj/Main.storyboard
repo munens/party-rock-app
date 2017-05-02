@@ -13,7 +13,7 @@
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="party_rock_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="184" width="375" height="483"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="62" id="Gdb-RW-B43" customClass="PartyCell" customModule="party_rock_app" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyCell" rowHeight="62" id="Gdb-RW-B43" customClass="PartyCell" customModule="party_rock_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gdb-RW-B43" id="g5A-sc-2a2">
@@ -121,8 +121,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="ItN-jq-99n" id="w42-om-m3h"/>
-                        <segue destination="rvF-XP-6E0" kind="showDetail" id="UOM-ze-evn"/>
+                        <outlet property="tableView" destination="ItN-jq-99n" id="uSa-Yg-bbK"/>
+                        <segue destination="rvF-XP-6E0" kind="show" identifier="VideoVC" action="showDetailViewController:sender:" id="9yN-zV-Yqw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -141,18 +141,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gKV-Rs-WFX">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKV-Rs-WFX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="273"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="273" id="T38-Kl-MJO"/>
+                                </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIK-Ij-cV4">
+                                <rect key="frame" x="21" y="323" width="333" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gKV-Rs-WFX" firstAttribute="leading" secondItem="gy0-63-Jo5" secondAttribute="leading" id="Afe-sc-Sti"/>
                             <constraint firstItem="gKV-Rs-WFX" firstAttribute="top" secondItem="gy0-63-Jo5" secondAttribute="top" id="GR9-xU-rOQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AIK-Ij-cV4" secondAttribute="trailing" constant="5" id="Hzq-YI-gfy"/>
                             <constraint firstAttribute="trailing" secondItem="gKV-Rs-WFX" secondAttribute="trailing" id="oLL-SO-DOF"/>
+                            <constraint firstItem="AIK-Ij-cV4" firstAttribute="top" secondItem="gKV-Rs-WFX" secondAttribute="bottom" constant="50" id="uPv-5E-dt3"/>
+                            <constraint firstItem="AIK-Ij-cV4" firstAttribute="leading" secondItem="gy0-63-Jo5" secondAttribute="leadingMargin" constant="5" id="zGv-uZ-URs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="videoTitle" destination="AIK-Ij-cV4" id="lB0-d4-lI7"/>
+                        <outlet property="webView" destination="gKV-Rs-WFX" id="bUZ-Rf-AWw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Brw-5B-tFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
